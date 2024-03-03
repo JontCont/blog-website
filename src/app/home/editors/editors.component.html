@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Editors</h1>
+  <div class="form-group">
+    <label for="Title">Title</label>
+    <input class="form-control" [(ngModel)]="markdown['title']" />
+  </div>
+  <div class="form-group">
+    <label for="Title">Sub Title</label>
+    <input class="form-control" [(ngModel)]="markdown['subtitle']" />
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <markdown-editor [(data)]="markdown['content']"></markdown-editor>
+    <markdown class="variable-binding" [data]="markdown['content']"></markdown>
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="onSave()">Save</button>
+  </div>
+</div>

@@ -200,9 +200,8 @@
 <textarea
   [id]="controlId"
   class="text-editor"
-  [formControl]="control"
-  (focus)="focus()"
-  (blur)="blur()"
+  [(ngModel)]="data"
+  (ngModelChange)="dataChange.emit($event)"
   cdkTextareaAutosize
   [rows]="6"
 ></textarea>
